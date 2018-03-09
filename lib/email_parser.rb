@@ -18,5 +18,4 @@ class EmailParser
     @emails
   end
 
-
 end
