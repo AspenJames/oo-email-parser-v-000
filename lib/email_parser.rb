@@ -10,7 +10,10 @@ class EmailParser
   end
 
   def parse
-    @emails.include?(",") ? @emails = @emails.split(", ") : @emails = @emails.split
+    @emails = @emails.split
+    @emails.each do |e|
+        e.chop! if e.include?(",")
+    end
     @emails.uniq!
     @emails
   end
